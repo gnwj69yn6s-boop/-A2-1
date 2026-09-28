@@ -2,6 +2,9 @@ import os
 import json
 from pathlib import Path
 
+from openai import OpenAI
+
+
 
 def load_brief(file_path):
     """브랜드 브리프 JSON 파일을 읽습니다."""
