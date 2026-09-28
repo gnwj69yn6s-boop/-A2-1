@@ -32,6 +32,14 @@ def main():
 
     output_dir = Path(output_path)
     output_dir.mkdir(parents=True, exist_ok=True)
+    
+api_key = os.getenv("OPENAI_API_KEY")
+
+if not api_key:
+    print("❌ OPENAI_API_KEY가 설정되지 않았습니다.")
+    return
+
+client = OpenAI(api_key=api_key)
 
     # 브리프 읽기
     try:
